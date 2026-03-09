@@ -1,0 +1,145 @@
+{
+    "info": {
+        "_postman_id": "96838634-9721-419d-a461-89753c155555",
+        "name": "Employee-CRUD",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Employee",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"John Doe\",\n    \"position\": \"Software Engineer\",\n    \"office\": \"New York\",\n    \"salary\": 80000\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/employees",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "employees"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get All Employees",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{url}}/api/employees",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "employees"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get One Employee",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{url}}/api/employees/:employeeId",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "employees",
+                        ":employeeId"
+                    ],
+                    "variable": [
+                        {
+                            "key": "employeeId",
+                            "value": ""
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Update Employee",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"name\": \"John Doe Updated\",\n    \"salary\": 85000\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "{{url}}/api/employees/:employeeId",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "employees",
+                        ":employeeId"
+                    ],
+                    "variable": [
+                        {
+                            "key": "employeeId",
+                            "value": ""
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Employee",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "{{url}}/api/employees/:employeeId",
+                    "host": [
+                        "{{url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "employees",
+                        ":employeeId"
+                    ],
+                    "variable": [
+                        {
+                            "key": "employeeId",
+                            "value": ""
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "variable": [
+        {
+            "key": "url",
+            "value": "http://localhost:8080",
+            "type": "string"
+        }
+    ]
+}
